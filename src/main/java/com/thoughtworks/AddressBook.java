@@ -1,7 +1,12 @@
 package com.thoughtworks;
 
+import java.util.Collection;
+import java.util.List;
+
 public class AddressBook {
     Person person;
+
+    private List<Person> people;
 
     AddressBook() {
     }
@@ -11,5 +16,7 @@ public class AddressBook {
 
     }
 
-
+    public List<Person> get() {
+        return null;
+    }
 }

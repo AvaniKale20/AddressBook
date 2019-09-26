@@ -1,6 +1,7 @@
 package com.thoughtworks;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -19,5 +20,11 @@ class AddressBookTest {
         assertEquals(true, addressBook.add(person));
     }
 
+    @Test
+    void givenNoPersonWasAdded_WhenRetriveAddressBookContent_ThenItShouldNotReturnAnyPerson() {
+        AddressBook addressBook = new AddressBook();
+
+        Assertions.assertTrue(addressBook.get().isEmpty());
+    }
 
 }
