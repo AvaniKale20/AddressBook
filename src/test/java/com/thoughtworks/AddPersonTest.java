@@ -21,10 +21,23 @@ class AddressBookTest {
     }
 
     @Test
-    void givenNoPersonWasAdded_WhenRetriveAddressBookContent_ThenItShouldNotReturnAnyPerson() {
+    void givenNoPersonWasAdded_WhenRetrieveAddressBookContent_ThenItShouldNotReturnAnyPerson() {
         AddressBook addressBook = new AddressBook();
 
         Assertions.assertTrue(addressBook.get().isEmpty());
+    }
+
+    @Test
+    void givenAddedPerson_WhenRetrieveFromAddressBook_ThenItShouldReturnThatPerson() {
+        Address address = new Address(" MgRoad", "pune", "Maharashtra", 431415);
+        Person person = new Person(02, "Stafon", "9098909890", address);
+        AddressBook addressBook = new AddressBook();
+
+        addressBook.add(person);
+
+        Assertions.assertEquals(1, addressBook.get().size());
+
+
     }
 
 }
