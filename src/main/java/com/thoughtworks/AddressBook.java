@@ -12,10 +12,8 @@ public class AddressBook {
         people = new ArrayList<>();
     }
 
-    public boolean add(Person person) {
+    public void add(Person person) {
         people.add(person);
-        return true;
-
     }
 
     public List<Person> get() {
